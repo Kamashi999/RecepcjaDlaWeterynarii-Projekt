@@ -10,12 +10,21 @@ using System.Windows.Forms;
 
 namespace RecepcjaDlaWeterynarii
 {
-    public partial class Form1: Form
+    public partial class UserControl1 : UserControl
     {
-        public Form1()
+        public UserControl1()
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
-// test
