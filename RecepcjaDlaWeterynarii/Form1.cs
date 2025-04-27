@@ -16,6 +16,8 @@ namespace RecepcjaDlaWeterynarii
         public Form1()
         {
             InitializeComponent();
+            userControl11.Show();
+            userControl31.Hide();
         }
 
         void Exit()
@@ -27,15 +29,31 @@ namespace RecepcjaDlaWeterynarii
             }
         }
 
+        void InsertInfo()
+        {
+            userControl11.Show();
+            userControl31.Hide();
+        }
+
+        void SearchInfo()
+        {
+            userControl11.Hide();
+            userControl31.Show();
+        }
+
+        private void FirstButton(object sender, EventArgs e)
+        {
+            InsertInfo();
+        }
+
+        private void SecondButton(object sender, EventArgs e)
+        {
+            SearchInfo();
+        }
+
         private void Exit_click(object sender, EventArgs e)
         {
             Exit();
         }
     }
 }
-// test
-
-// test2
-
-
-// test3
