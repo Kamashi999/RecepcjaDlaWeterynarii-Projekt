@@ -16,6 +16,9 @@ namespace RecepcjaDlaWeterynarii
         public Form1()
         {
             InitializeComponent();
+            userControl11.Hide();
+            userControl21.Hide();
+
         }
 
         void Exit()
@@ -30,6 +33,23 @@ namespace RecepcjaDlaWeterynarii
         private void Exit_click(object sender, EventArgs e)
         {
             Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            userControl21.Hide();
+            userControl11.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            userControl11.Hide();
+            userControl21.Show();
         }
     }
 }

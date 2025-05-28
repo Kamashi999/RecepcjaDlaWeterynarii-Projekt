@@ -32,6 +32,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.userControl11 = new RecepcjaDlaWeterynarii.UserControl1();
+            this.userControl21 = new RecepcjaDlaWeterynarii.UserControl2();
             this.SuspendLayout();
             // 
             // button1
@@ -42,6 +44,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Wprowadź Pacjenta";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -51,6 +54,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Wyszukaj Pacjenta";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -62,16 +66,33 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Exit_click);
             // 
+            // userControl11
+            // 
+            this.userControl11.Location = new System.Drawing.Point(191, 0);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(606, 450);
+            this.userControl11.TabIndex = 3;
+            // 
+            // userControl21
+            // 
+            this.userControl21.Location = new System.Drawing.Point(191, 0);
+            this.userControl21.Name = "userControl21";
+            this.userControl21.Size = new System.Drawing.Size(606, 450);
+            this.userControl21.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.userControl21);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
@@ -82,6 +103,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private UserControl1 userControl11;
+        private UserControl2 userControl21;
     }
 }
 
