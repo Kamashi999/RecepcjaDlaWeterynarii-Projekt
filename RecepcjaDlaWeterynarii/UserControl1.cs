@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,9 +14,6 @@ namespace RecepcjaDlaWeterynarii
 {
     public partial class UserControl1 : UserControl
     {
-        Dictionary<int, animal> animals = new Dictionary<int, animal>();
-
-        int i = 1;
         public UserControl1()
         {
             InitializeComponent();
@@ -25,6 +23,7 @@ namespace RecepcjaDlaWeterynarii
             PiesHide();
             PapugaHide();
             WazHide();
+            dlugoscCm.Hide();
         }
         void PiesShow()
         {
@@ -36,12 +35,14 @@ namespace RecepcjaDlaWeterynarii
         {
             papugaSkrzydla.Show();
             papugaSkrzydlaText.Show();
+            dlugoscCm.Show();
         }
 
         void PiesHide()
         {
             piesRasa.Hide();
             piesRasaText.Hide();
+
         }
 
         void PapugaHide()
@@ -54,6 +55,7 @@ namespace RecepcjaDlaWeterynarii
         {
             wazDlugosc.Show();
             wazDlugoscText.Show();
+            dlugoscCm.Show();
         }
 
         void WazHide()
@@ -68,7 +70,9 @@ namespace RecepcjaDlaWeterynarii
                 PiesShow();
                 PapugaHide();
                 WazHide();
-            } else if (comboBox1.Text == "Papuga")
+                dlugoscCm.Hide();
+            }
+            else if (comboBox1.Text == "Papuga")
             {
                 PapugaShow();
                 PiesHide();
@@ -85,7 +89,60 @@ namespace RecepcjaDlaWeterynarii
                 PiesHide();
                 PapugaHide();
                 WazHide();
+                dlugoscCm.Hide();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int wiek = Convert.ToInt32(textBox8.Text);
+            int mikroczip = Convert.ToInt32(textBox7.Text);
+            double waga = Convert.ToDouble(textBox6.Text);
+
+
+
+            if (comboBox1.SelectedItem == "Pies")
+            {
+                Pies pies = new Pies(
+                    textBox1.Text,
+                    comboBox1.Text,
+                    textBox3.Text,
+                    wiek,
+                    mikroczip,
+                    waga,
+                    piesRasaText.Text
+                );
+
+                MessageBox.Show("test");
+            }
+            else if (comboBox1.SelectedItem == "Wąż")
+            {
+                int dlugoscCm = Convert.ToInt32(wazDlugoscText.Text);
+                Waz waz = new Waz(
+                    textBox1.Text,
+                    comboBox1.Text,
+                    textBox3.Text,
+                    wiek,
+                    mikroczip,
+                    waga,
+                    dlugoscCm
+                    );
+                waz.Pokaz(label4);
+            }
+            else if (comboBox1.SelectedItem == "Papuga")
+            {
+                int dlugoscSkrzydlaCm = Convert.ToInt32(papugaSkrzydlaText.Text);
+                Papuga papuga = new Papuga(
+                textBox1.Text,
+                comboBox1.Text,
+                textBox3.Text,
+                wiek,
+                mikroczip,
+                waga,
+                dlugoscSkrzydlaCm
+            );
             }
         }
     }
 }
+
