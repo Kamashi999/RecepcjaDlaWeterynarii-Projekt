@@ -33,11 +33,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -59,6 +56,13 @@
             this.label15 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.piesRasa = new System.Windows.Forms.Label();
+            this.piesRasaText = new System.Windows.Forms.TextBox();
+            this.papugaSkrzydla = new System.Windows.Forms.Label();
+            this.papugaSkrzydlaText = new System.Windows.Forms.TextBox();
+            this.wazDlugosc = new System.Windows.Forms.Label();
+            this.wazDlugoscText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -91,17 +95,10 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Gatunek";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(140, 104);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(137, 176);
+            this.label3.Location = new System.Drawing.Point(137, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 8;
@@ -109,31 +106,15 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(140, 192);
+            this.textBox3.Location = new System.Drawing.Point(140, 148);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 7;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(137, 132);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Rasa";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(140, 148);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 5;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(137, 307);
+            this.label6.Location = new System.Drawing.Point(137, 263);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 13);
             this.label6.TabIndex = 14;
@@ -141,7 +122,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(140, 323);
+            this.textBox6.Location = new System.Drawing.Point(140, 279);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 13;
@@ -149,7 +130,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(137, 263);
+            this.label7.Location = new System.Drawing.Point(137, 219);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 13);
             this.label7.TabIndex = 12;
@@ -157,7 +138,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(140, 279);
+            this.textBox7.Location = new System.Drawing.Point(140, 235);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 20);
             this.textBox7.TabIndex = 11;
@@ -165,7 +146,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(137, 219);
+            this.label8.Location = new System.Drawing.Point(137, 175);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(32, 13);
             this.label8.TabIndex = 10;
@@ -173,7 +154,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(140, 235);
+            this.textBox8.Location = new System.Drawing.Point(140, 191);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 20);
             this.textBox8.TabIndex = 9;
@@ -305,10 +286,74 @@
             this.button1.Text = "Zapisz";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(140, 104);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 30;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // piesRasa
+            // 
+            this.piesRasa.AutoSize = true;
+            this.piesRasa.Location = new System.Drawing.Point(137, 311);
+            this.piesRasa.Name = "piesRasa";
+            this.piesRasa.Size = new System.Drawing.Size(32, 13);
+            this.piesRasa.TabIndex = 32;
+            this.piesRasa.Text = "Rasa";
+            // 
+            // piesRasaText
+            // 
+            this.piesRasaText.Location = new System.Drawing.Point(140, 327);
+            this.piesRasaText.Name = "piesRasaText";
+            this.piesRasaText.Size = new System.Drawing.Size(100, 20);
+            this.piesRasaText.TabIndex = 31;
+            // 
+            // papugaSkrzydla
+            // 
+            this.papugaSkrzydla.AutoSize = true;
+            this.papugaSkrzydla.Location = new System.Drawing.Point(137, 311);
+            this.papugaSkrzydla.Name = "papugaSkrzydla";
+            this.papugaSkrzydla.Size = new System.Drawing.Size(103, 13);
+            this.papugaSkrzydla.TabIndex = 34;
+            this.papugaSkrzydla.Text = "Rozpiętość skrzydeł";
+            // 
+            // papugaSkrzydlaText
+            // 
+            this.papugaSkrzydlaText.Location = new System.Drawing.Point(140, 327);
+            this.papugaSkrzydlaText.Name = "papugaSkrzydlaText";
+            this.papugaSkrzydlaText.Size = new System.Drawing.Size(100, 20);
+            this.papugaSkrzydlaText.TabIndex = 33;
+            // 
+            // wazDlugosc
+            // 
+            this.wazDlugosc.AutoSize = true;
+            this.wazDlugosc.Location = new System.Drawing.Point(137, 311);
+            this.wazDlugosc.Name = "wazDlugosc";
+            this.wazDlugosc.Size = new System.Drawing.Size(48, 13);
+            this.wazDlugosc.TabIndex = 37;
+            this.wazDlugosc.Text = "Długość";
+            // 
+            // wazDlugoscText
+            // 
+            this.wazDlugoscText.Location = new System.Drawing.Point(140, 327);
+            this.wazDlugoscText.Name = "wazDlugoscText";
+            this.wazDlugoscText.Size = new System.Drawing.Size(100, 20);
+            this.wazDlugoscText.TabIndex = 36;
+            // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.wazDlugosc);
+            this.Controls.Add(this.wazDlugoscText);
+            this.Controls.Add(this.papugaSkrzydla);
+            this.Controls.Add(this.papugaSkrzydlaText);
+            this.Controls.Add(this.piesRasa);
+            this.Controls.Add(this.piesRasaText);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label15);
@@ -332,10 +377,7 @@
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "UserControl1";
@@ -350,11 +392,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label7;
@@ -376,5 +415,12 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label piesRasa;
+        private System.Windows.Forms.TextBox piesRasaText;
+        private System.Windows.Forms.Label papugaSkrzydla;
+        private System.Windows.Forms.TextBox papugaSkrzydlaText;
+        private System.Windows.Forms.Label wazDlugosc;
+        private System.Windows.Forms.TextBox wazDlugoscText;
     }
 }

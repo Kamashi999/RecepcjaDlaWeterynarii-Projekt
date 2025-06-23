@@ -19,17 +19,73 @@ namespace RecepcjaDlaWeterynarii
         public UserControl1()
         {
             InitializeComponent();
-            
+            comboBox1.Items.Add("Pies");
+            comboBox1.Items.Add("Papuga");
+            comboBox1.Items.Add("Wąż");
+            PiesHide();
+            PapugaHide();
+            WazHide();
+        }
+        void PiesShow()
+        {
+            piesRasa.Show();
+            piesRasaText.Show();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        void PapugaShow()
         {
-
+            papugaSkrzydla.Show();
+            papugaSkrzydlaText.Show();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        void PiesHide()
         {
+            piesRasa.Hide();
+            piesRasaText.Hide();
+        }
 
+        void PapugaHide()
+        {
+            papugaSkrzydla.Hide();
+            papugaSkrzydlaText.Hide();
+        }
+
+        void WazShow()
+        {
+            wazDlugosc.Show();
+            wazDlugoscText.Show();
+        }
+
+        void WazHide()
+        {
+            wazDlugosc.Hide();
+            wazDlugoscText.Hide();
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "Pies")
+            {
+                PiesShow();
+                PapugaHide();
+                WazHide();
+            } else if (comboBox1.Text == "Papuga")
+            {
+                PapugaShow();
+                PiesHide();
+                WazHide();
+            }
+            else if (comboBox1.Text == "Wąż")
+            {
+                WazShow();
+                PiesHide();
+                PapugaHide();
+            }
+            else
+            {
+                PiesHide();
+                PapugaHide();
+                WazHide();
+            }
         }
     }
 }
