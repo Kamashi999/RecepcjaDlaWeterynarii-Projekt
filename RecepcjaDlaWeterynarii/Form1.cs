@@ -36,7 +36,7 @@ namespace RecepcjaDlaWeterynarii
             Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //wprowadź pacjenta
         {
             userControl21.Hide();
             userControl11.Show();
@@ -47,7 +47,7 @@ namespace RecepcjaDlaWeterynarii
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) //Wyszukaj pacjenta
         {
             userControl11.Hide();
             userControl21.Show();
@@ -56,6 +56,11 @@ namespace RecepcjaDlaWeterynarii
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void userControl21_Load(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

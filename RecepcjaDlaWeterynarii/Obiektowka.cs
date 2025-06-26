@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace RecepcjaDlaWeterynarii_klasy
 {
@@ -125,6 +127,7 @@ namespace RecepcjaDlaWeterynarii_klasy
                 MessageBox.Show("Numer telefonu musi zawierać dokładnie 9 cyfr.");
 
             Imie = imie;
+           
             Nazwisko = nazwisko;
             NumerTelefonu = numerTelefonu;
             AdresEmail = adresEmail;

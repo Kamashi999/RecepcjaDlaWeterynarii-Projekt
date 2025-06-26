@@ -73,6 +73,7 @@
             this.userControl21.Name = "userControl21";
             this.userControl21.Size = new System.Drawing.Size(606, 450);
             this.userControl21.TabIndex = 4;
+            this.userControl21.Load += new System.EventHandler(this.userControl21_Load);
             // 
             // userControl11
             // 
@@ -106,7 +107,6 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-
         }
 
         #endregion
@@ -116,7 +116,7 @@
         private System.Windows.Forms.Button button3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private UserControl1 userControl11;
-        private UserControl2 userControl21;
+        private RecepcjaDlaWeterynarii.UserControl2 userControl21;
         private System.Windows.Forms.Button button4;
     }
 }
