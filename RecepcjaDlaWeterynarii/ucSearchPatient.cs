@@ -48,11 +48,14 @@ namespace RecepcjaDlaWeterynarii
                 owner.Address,
                 owner.Phone
             );
+            petOwnerInformationList.Clear();
 
+           
             petOwnerInformationList.Add(petOwnerInfo);
 
             dgvPatient.AutoGenerateColumns = true;
             dgvPatient.DataSource = petOwnerInformationList;
+            dgvPatient.Refresh();
         }
     }
 }
