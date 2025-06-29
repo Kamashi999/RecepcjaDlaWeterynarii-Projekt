@@ -25,3 +25,6 @@ Projekt stworzony z myślą o prostocie obsługi i efektywnym zarządzaniu infor
 
 - Wprowadzenie opcji modyfikacji rekordów.
 - Zapisywanie logów.
+
+- ## Certyfikat
+- EULA
