@@ -28,3 +28,8 @@ Projekt stworzony z myślą o prostocie obsługi i efektywnym zarządzaniu infor
 
 - ## Certyfikat
 - EULA
+
+- ## UML
+
+ ![image](https://github.com/user-attachments/assets/adfb27f3-7d92-4b37-82ab-c15e04ce8ad9)
+
