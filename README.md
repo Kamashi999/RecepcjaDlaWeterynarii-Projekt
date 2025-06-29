@@ -11,11 +11,23 @@ Projekt stworzony z myślą o prostocie obsługi i efektywnym zarządzaniu infor
 - **C#**
 - **.NET WinForms**
 - **PostgreSQL** (baza danych)
+- ![image](https://github.com/user-attachments/assets/7388dee0-36db-4906-8236-5cc960598b4a)
+
 
 ## Funkcjonalności
 
-- Dodawanie/Usuwanie nowych pacjentów do bazy danych.
+- Dodawanie nowych pacjentów do bazy danych.
+- ![image](https://github.com/user-attachments/assets/48a56bc5-fb2c-42dd-97f7-c3583a4bb90e)
+
 - Wyszukiwanie pacjentów po przypisanym identyfikatorze.
+- ![image](https://github.com/user-attachments/assets/057a9aab-329b-4898-8d8a-bff65624e4ee)
+
+- Poliformizm
+- ![image](https://github.com/user-attachments/assets/97078263-7015-4ab8-b3ad-d8fc2064216d)
+
+- Hermetyzacja
+- ![image](https://github.com/user-attachments/assets/416f195a-bc7a-473e-b03f-646c717c0945)
+
 
 ## Przeznaczenie
 
@@ -31,5 +43,6 @@ Projekt stworzony z myślą o prostocie obsługi i efektywnym zarządzaniu infor
 
 - ## UML
 
- ![image](https://github.com/user-attachments/assets/adfb27f3-7d92-4b37-82ab-c15e04ce8ad9)
+![image](https://github.com/user-attachments/assets/e577b26f-39dd-465e-9770-178f0fb09c72)
+
 
